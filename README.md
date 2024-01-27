@@ -30,12 +30,16 @@
 # Recursos
 
 > [!TIP]
+
 > GET /song retorna un arreglo de objetos json
+
 > POST /song crea un recurso en fs
+
 > GET /song/:songId retorna un objeto json
+
 > PUT /song/songId modifica un recurso en fs
+
 > DELETE /song/:songId elimina un recurso de fs
->
 
 # Requisitos Desarrollo
 
