@@ -29,7 +29,7 @@
 
 # Recursos
 
-> [!INFO]
+> [!TIP]
 > GET /song retorna un arreglo de objetos json
 > POST /song crea un recurso en fs
 > GET /song/:songId retorna un objeto json
