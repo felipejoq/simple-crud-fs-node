@@ -27,7 +27,7 @@
 > __Nota:__ Si su puerto 3000 está en uso, modificar la variable PORT en el archivo .env por un puerto que esté libre, ejemplo: ```PORT:3001```
 >
 
-# ℹ️ Recursos
+## ℹ️ Recursos
 
 > GET /song retorna un arreglo de objetos json
 
@@ -39,7 +39,7 @@
 
 > DELETE /song/:songId elimina un recurso de fs
 
-# Requisitos Desarrollo
+### 📚 Requisitos Desarrollo
 
 - Node v18.17.1 ó superior.
 - npm v9.6.7 ó superior.
