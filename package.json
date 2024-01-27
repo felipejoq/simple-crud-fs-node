@@ -1,0 +1,22 @@
+{
+  "name": "repertorio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.4.1",
+    "env-var": "7.4.1",
+    "express": "4.18.2",
+    "joi": "17.12.0",
+    "uuid": "9.0.1"
+  }
+}
