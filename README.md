@@ -27,9 +27,7 @@
 > __Nota:__ Si su puerto 3000 está en uso, modificar la variable PORT en el archivo .env por un puerto que esté libre, ejemplo: ```PORT:3001```
 >
 
-# Recursos
-
-> [!TIP]
+# ℹ️ Recursos
 
 > GET /song retorna un arreglo de objetos json
 
