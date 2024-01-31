@@ -12,7 +12,7 @@ const main = async () => {
     app,
     port: envs.PORT,
     routes: AppRouter.routes,
-    acceptedOrigins: [`http://localhost:${envs.PORT}`],
+    acceptedOrigins: [],
   });
 
   server.start();

@@ -19,7 +19,7 @@ export class Server {
   async start() {
 
     //* Middlewares
-    this.app.use(CorsMiddleware.corsAllow({acceptedOrigins: this.acceptedOrigins}))
+    this.app.use(CorsMiddleware.corsAllow({ acceptedOrigins: this.acceptedOrigins }))
     this.app.use(express.json()); // raw
     this.app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded
     this.app.disable('x-powered-by');
