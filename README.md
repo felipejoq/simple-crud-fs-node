@@ -27,6 +27,14 @@
 > __Nota:__ Si su puerto 3000 está en uso, modificar la variable PORT en el archivo .env por un puerto que esté libre, ejemplo: ```PORT:3001```
 >
 
+## Ejecutar Test Suite
+
+```npm run test```
+
+o con coverage:
+
+```npm run test:coverage```
+
 ## ℹ️ Recursos
 
 > GET /song retorna un arreglo de objetos json
