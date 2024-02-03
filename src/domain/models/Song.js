@@ -1,4 +1,4 @@
-import { getUUUID } from "../../config/plugins/uuid.plugin.js";
+import { getUUID } from "../../config/plugins/uuid.plugin.js";
 
 export class Song {
 
@@ -14,6 +14,6 @@ export class Song {
   }
 
   getId() {
-    return getUUUID();
+    return getUUID();
   }
 }

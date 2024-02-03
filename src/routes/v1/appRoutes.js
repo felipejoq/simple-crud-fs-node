@@ -3,8 +3,6 @@ import { SongRoutes } from "../../controllers/songs/songs.routes.js";
 
 export class AppRouter {
 
-  constructor() { }
-
   static get routes() {
     const AppRouter = Router();
 
