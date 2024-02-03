@@ -4,18 +4,17 @@ import { AppRouter } from './routes/v1/appRoutes.js';
 import { Server } from './Server.js';
 
 // Servidor de Express.
-const app = express();
+//const app = express();
 
 // Función de arranque.
 const main = async () => {
   const server = new Server({
-    app,
     port: envs.PORT,
     routes: AppRouter.routes,
     acceptedOrigins: [],
   });
 
-  server.start();
+  await server.start();
 }
 
 // Inicialización.

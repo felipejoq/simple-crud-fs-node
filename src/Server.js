@@ -1,14 +1,10 @@
-import path from 'node:path';
 import express from 'express';
-import { URL } from 'url';
 import { CorsMiddleware } from './middlewares/cors.middleware.js';
-
-const __dirname = new URL('.', import.meta.url).pathname;
 
 export class Server {
 
-  constructor({ app, port, routes, acceptedOrigins, publicPath = 'public', serverListener }) {
-    this.app = app;
+  constructor({ port, routes, acceptedOrigins, publicPath = 'public', serverListener }) {
+    this.app = express();
     this.port = port;
     this.routes = routes;
     this.acceptedOrigins = acceptedOrigins;
@@ -31,9 +27,8 @@ export class Server {
     this.app.use(this.routes);
 
     //* SPA
-    this.app.get('/', (req, res) => {
-      const indexPath = path.join(__dirname + `../${this.publicPath}/index.html`);
-      res.sendFile(indexPath);
+    this.app.get('*', (req, res) => {
+      res.redirect('/');
     });
 
     this.serverListener = this.app.listen(this.port, () => {

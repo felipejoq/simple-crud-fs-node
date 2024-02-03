@@ -1,19 +1,18 @@
-
-import { envs } from '../config/plugins/envs.js';
-import { CustomError } from '../config/errors/custom.error.js';
-import { Song } from '../domain/models/Song.js';
+import {envs} from '../config/plugins/envs.js';
+import {CustomError} from '../config/errors/custom.error.js';
+import {Song} from '../domain/models/Song.js';
 
 export class SongsService {
 
   PATH_DATA = envs.PATH_DATA;
+  DATA_NAME = envs.DATA_NAME;
 
   constructor(dataService) {
     this.dataService = dataService;
   }
 
   async getSongs() {
-    const songs = await this.dataService.readFile({ pathFile: this.PATH_DATA });
-    return songs;
+    return await this.dataService.readFile({pathFile: this.PATH_DATA, dataName: this.DATA_NAME});
   }
 
   async getSongById({ songId }) {
@@ -37,7 +36,7 @@ export class SongsService {
       newSong
     ]
 
-    await this.dataService.saveData({ data: songs, pathFile: this.PATH_DATA });
+    await this.dataService.saveData({ data: songs, pathFile: this.PATH_DATA, dataName: this.DATA_NAME });
 
     return newSong;
   }
@@ -55,7 +54,7 @@ export class SongsService {
       return song;
     })
 
-    await this.dataService.saveData({ data: songs, pathFile: this.PATH_DATA });
+    await this.dataService.saveData({ data: songs, pathFile: this.PATH_DATA, dataName: this.DATA_NAME });
 
     return newSong;
 
@@ -69,7 +68,7 @@ export class SongsService {
 
     songs = songs.filter(song => song.id !== songId)
 
-    await this.dataService.saveData({ data: songs, pathFile: this.PATH_DATA });
+    await this.dataService.saveData({ data: songs, pathFile: this.PATH_DATA, dataName: this.DATA_NAME });
 
     return song;
 
